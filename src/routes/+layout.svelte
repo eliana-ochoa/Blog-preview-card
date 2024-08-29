@@ -1,18 +1,19 @@
 <script>
 // @ts-nocheck
     import '../app.css';
-    let src = '../src/lib/illustration-article.svg';
+
+    import ilustr from '../src/lib/illustration-article.svg'; 
+    import perf from '../src/lib/image-avatar.webp';
 </script>
 
 <slot />
 
 <body class="bg-yellow-300 m-4 flex justify-center" >
 
-    <div class="bg-white p-4 w-6/12 font-sans border border-black rounded-xl shadow-[5px_5px_0px_0px_rgba(1,1,0)]">
-
+    <div class="bg-white p-4 w-80 m-10 font-sans border border-black rounded-xl shadow-[5px_5px_0px_0px_rgba(1,1,0)]">
         <div class="flex items-aling justify-content ">
             <!-- svelte-ignore a11y-img-redundant-alt -->
-            <img {src} alt="image-card" class=" rounded"/>
+            <img src={ilustr} alt="image-card" class=" rounded"/>
         </div>
         <div class="mt-6">
             <button class="bg-yellow-300 rounded font-bold px-4 h-8">Learning</button>
@@ -26,10 +27,9 @@
         <p class="mt-5 text-gray-500 text-left">
             These languages are the backbone of every website, defining structure, content, and presentation.
         </p>
-        <div class="mt-5 flex items-aling justify-content ">
-            <!-- svelte-ignore component-name-lowercase -->
+        <div class="mt-5 flex items-aling justify-content">
             <!-- svelte-ignore a11y-img-redundant-alt -->
-            <img src="../src/lib/image-avatar.webp" alt="image-perfil" class="w-10"/>
+            <img src={perf} alt="image-perfil" class="w-10"/>
             <p class="font-bold flex items-center">Greg Hooper</p>   
         </div>
     </div>
